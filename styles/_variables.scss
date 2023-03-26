@@ -1,0 +1,55 @@
+/** 
+* * Fonts
+*/
+
+$robotoblack: 'robotoblack';
+$robotoblack_italic: 'robotoblack_italic';
+$bold: 'robotobold';
+$bold_italic: 'robotobold_italic';
+$italic: 'robotoitalic';
+$light: 'robotolight';
+$light_italic: 'robotolight_italic';
+$medium: 'robotomedium';
+$medium_italic: 'robotomedium_italic';
+$regular: 'robotoregular';
+$thin: 'robotothin';
+$thin_italic: 'robotothin_italic';
+
+/**
+* * Colors
+*/
+
+$black: #000000;
+$black_blue: #333B41;
+$dark_bg: #111115;
+$frosted_glass_white: rgba(253, 253, 255, 0.52);
+$gray: #767474;
+$gray_smoky: #ABABAB;
+$gray4: #BDBDBD;
+$gray_social: rgba(196, 196, 196, 0.5);
+$gray_light: #F1F3F2;
+$green: #4B9200;
+$orange_dark: #F9804B;
+$orange_dark_active: #fd8d1c;
+$orange_light: #FE9013;
+$orange_light_active: #ffee2e;
+$orange_hover: #E47209;
+$red: #D31414;
+$white: #FFFFFF;
+$yellow: #FFEE2E;
+$shadow: 0 1px 20px 1px rgb(24 22 19), 0 0px 15px 1px rgb(159 114 69);
+$orange_bg: 113.96deg, $orange_dark 1.49%, $orange_light 101.44%;
+$orange_gradient: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%),
+  linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%),
+  linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+$pink_gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%),
+  linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+
+/**
+* * Media queries
+*/
+
+$desktops: 'screen and (min-width: 1000px)';
+$small_desktop: 'screen and (max-width: 1601px)';
+$tablet: 'screen and (max-width: 1001px)';
+$phone: 'screen and (max-width: 641px)';

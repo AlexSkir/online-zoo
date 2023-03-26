@@ -1,0 +1,94 @@
+.btn {
+  @include flex_rules(center, center);
+  @include border_radius(25px);
+  @include font(16px, 22px, 500, $medium, $white);
+  @include block(298px, 54px);
+  @include linear_gradient($orange_bg);
+  text-transform: uppercase;
+  z-index: 9;
+  transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+
+  &:hover {
+    cursor: pointer;
+    background: $orange_hover;
+  }
+
+  &:active {
+    background: $green;
+  }
+
+  &[disabled='true'] {
+    background: $gray;
+    cursor: default;
+  }
+}
+
+.btn_choose {
+  @extend .btn;
+  background: $orange_light;
+  margin: 80px 0 100px 0;
+
+  @include media($small_desktop) {
+    margin-bottom: 140px;
+  }
+
+  @include media($tablet) {
+    margin: 60px 0 100px 0;
+  }
+
+  @include media($phone) {
+    margin: 20px 0 60px 0;
+  }
+}
+
+.btn_square {
+  @extend .btn;
+  @include border_radius(5px);
+}
+
+.btn_round {
+  @extend .btn;
+  @include border_radius(50px);
+
+  @include media($phone) {
+    display: none
+  }
+
+  &.btn_left {
+    @include block(62px, 62px, absolute, calc(50% - 31px), null, null, -82px);
+
+    &::before {
+      content: '\2190';
+      @include font(16px, 22px, 500, $medium, $white);
+    }
+
+    @include media($small_desktop) {
+      left: calc(50% - 62px/2 - 115px);
+    }
+
+    @include media($tablet) {
+      left: calc(50% - 62px/2 - 45px);
+    }
+  }
+
+  &.btn_right {
+    @include block(62px, 62px, absolute, calc(50% - 31px), -82px, null, null);
+
+    &::before {
+      content: '\2192';
+      @include font(16px, 22px, 500, $medium, $white);
+    }
+
+    @include media($small_desktop) {
+      right: calc(50% - 62px/2 - 115px);
+    }
+
+    @include media($tablet) {
+      right: calc(50% - 62px/2 - 45px);
+    }
+  }
+}
+
+.inactive {
+  opacity: 0.6;
+}

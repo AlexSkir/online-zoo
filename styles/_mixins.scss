@@ -1,0 +1,220 @@
+@mixin border_radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin flex_rules($align, $justify: null, $direction: null, $wrap: null) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin block($width, $height: null, $position: null, $top: null, $right: null, $bottom: null, $left: null) {
+  width: $width;
+  height: $height;
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin bg_image($url, $size: cover) {
+  background: url($url);
+  background-size: $size;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin linear_gradient($data, $property: null) {
+  @if $property ==null {
+    background: -webkit-linear-gradient($data);
+    background: -moz-linear-gradient($data);
+    background: -ms-linear-gradient($data);
+    background: -o-linear-gradient($data);
+    background: linear-gradient($data);
+  }
+
+  @else {
+    #{$property}: -webkit-linear-gradient($data);
+    #{$property}: -moz-linear-gradient($data);
+    #{$property}: -ms-linear-gradient($data);
+    #{$property}: -o-linear-gradient($data);
+    #{$property}: linear-gradient($data);
+  }
+}
+
+@mixin font($size, $height: null, $weight: null, $family: null, $color: null) {
+  font-family: $family, sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin placeholder() {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+@mixin noscrollbar($direction: y) {
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+
+  /* for Firefox */
+  @if $direction ==y {
+    overflow-y: scroll;
+  }
+
+  @else {
+    overflow-x: scroll;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
+  }
+}
+
+@mixin scrollbar {
+  .scroll-wrapper {
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: relative;
+  }
+
+  .scroll-wrapper>.scroll-content {
+    @include block(auto !important, auto, relative !important, 0, null, null, 0);
+    max-height: none;
+    max-width: none !important;
+    border: none !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box !important;
+    overflow: scroll !important;
+  }
+
+  .scroll-wrapper>.scroll-content::-webkit-scrollbar {
+    @include block(0, 0);
+  }
+
+  .scroll-element {
+    display: none;
+  }
+
+  .scroll-element,
+  .scroll-element div {
+    box-sizing: content-box;
+  }
+
+  .scroll-element.scroll-x.scroll-scrollx_visible,
+  .scroll-element.scroll-y.scroll-scrolly_visible {
+    display: block;
+  }
+
+  .scroll-element .scroll-bar,
+  .scroll-element .scroll-arrow {
+    cursor: default;
+  }
+
+  .scrollbar-external_wrapper {
+    @include block(100%, 395px !important, relative);
+  }
+
+  .scrollbar-external {
+    @include block(100%, 400px);
+    overflow: auto;
+  }
+
+  .external-scroll_x,
+  .external-scroll_y {
+    display: none;
+    position: absolute;
+    border: solid 1px #9999fc;
+    cursor: pointer;
+  }
+
+  .external-scroll_x.scroll-scrollx_visible {
+    @include block(600px, 8px, null, 417px, null, null, calc(50% - 599px/2 - 0.5px));
+    @include border_radius(5px);
+    display: block;
+    background: #F5F7F6;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+  }
+
+  .external-scroll_x.scroll-scrollx_visible::before {
+    content: '';
+    @include block(null, null, absolute, 0, 0, 0, 0);
+    z-index: -1;
+    margin: -1px;
+    border-radius: inherit;
+    background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%),
+      linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+
+  }
+
+  .external-scroll_y.scroll-scrolly_visible {
+    @include block(10px, 200px, null, 0, 0, 0, 610px);
+    display: none;
+  }
+
+  .external-scroll_x div,
+  .external-scroll_y div {
+    @include block(100%, 100%, absolute, 0, null, null, 0);
+  }
+
+  .external-scroll_x .scroll-bar,
+  .external-scroll_y .scroll-bar {
+    background: #9999fc;
+    z-index: 12;
+  }
+
+  .external-scroll_x .scroll-bar {
+    @include block(115px, 6px);
+    @include border_radius(5px);
+    background-color: $orange_light;
+  }
+
+  .external-scroll_y .scroll-bar {
+    @include block(null, 100px);
+  }
+}
+
+@mixin media($device) {
+  @media #{$device} {
+    @content;
+  }
+}

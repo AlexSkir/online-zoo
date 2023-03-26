@@ -1,0 +1,92 @@
+.active_link {
+  color: $orange_dark;
+  background: none;
+
+  @supports (background-clip: text) {
+    @include linear_gradient($orange_bg);
+    color: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+a.text_link {
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: $orange_light;
+  }
+
+  @supports (text-decoration-color: $orange_light) {
+    text-decoration: underline;
+    text-decoration-color: $orange_light;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+a.thin_link {
+  color: $white;
+
+  &:hover {
+    @extend .active_link;
+  }
+
+  &:active {
+    color: $green;
+    text-decoration: underline;
+  }
+}
+
+.nav_list_item {
+  & .active_link {
+    @extend .active_link;
+  }
+
+  & a.nav_link:hover {
+    @extend .active_link;
+  }
+}
+
+a.nav_link {
+  @include font(16px, 22px, 500, $medium, $white);
+}
+
+a.social_link {
+  @include flex_rules(center);
+  color: $white;
+
+  .social_link_wrapper {
+    @include border_radius(50%);
+    @include flex_rules(center, center);
+    @include block(26px, 26px);
+    background-color: $gray_social;
+  }
+
+  &:hover {
+    @extend .active_link;
+
+    .social_link_wrapper {
+      @include linear_gradient($orange_bg);
+    }
+  }
+
+  &:active {
+    color: $green;
+
+    .social_link_wrapper {
+      background-color: $green;
+    }
+  }
+}

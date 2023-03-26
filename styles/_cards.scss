@@ -1,0 +1,230 @@
+/* Animal card */
+.card_wrapper {
+  @include block(100%, null, relative);
+
+  .animals_list {
+    @include flex_rules(null, null, column, wrap);
+    @include noscrollbar(x);
+    max-height: 872px;
+    height: 872px;
+
+    @include media($small_desktop) {
+      max-height: 800px;
+      height: 800px;
+    }
+
+    @include media($tablet) {
+      max-height: 755px;
+      height: 755px;
+    }
+
+    @include media($phone) {
+      @include flex_rules(center, center, inherit);
+      @include noscrollbar();
+      max-height: 1390px;
+      height: 1390px;
+    }
+
+    .animals_list_item {
+      @include border_radius(5px);
+      @include block(366px, 426px, relative);
+      border: 1px solid $orange_dark;
+      margin-right: 30px;
+
+      @include media($small_desktop) {
+        @include block(294px, 354px);
+      }
+
+      @include media($tablet) {
+        @include block(285px, 332px);
+      }
+
+      @include media($phone) {
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+
+      &:hover {
+        box-shadow: $shadow;
+
+        @include media($phone) {
+          box-shadow: none;
+        }
+      }
+
+      &:nth-child(odd) {
+        margin-bottom: 20px;
+
+        @include media($small_desktop) {
+          margin-bottom: 90px;
+        }
+
+        @include media($phone) {
+          margin-bottom: 20px;
+        }
+      }
+
+      &.no_margin_right {
+        margin-right: 0;
+      }
+
+      a.animal_card {
+        flex-direction: column;
+
+        .photo_card {
+          @include block(100%, auto);
+          @include border_radius(5px 5px 0 0);
+        }
+
+        .card_info {
+          @include flex_rules(null, space-between);
+          @include block(100%, 60px, absolute, null, null, 0);
+          padding: 10px;
+          z-index: -1;
+
+          @include media($tablet) {
+            height: 47px;
+            padding-top: 6px;
+          }
+
+          .card_text {
+            @include flex_rules(flex-start, null, column);
+            @include font(15px, 18px, 300, $light, $black);
+
+            @include media($tablet) {
+              line-height: 14px;
+            }
+          }
+
+          .card_title {
+            @include font(16px, 22px, 500, $medium);
+            text-transform: uppercase;
+
+            @include media($tablet) {
+              line-height: 17px;
+            }
+          }
+
+          .card_icon {
+            @include block(33px, 37px);
+
+            &.banana_icon {
+              @include bg_image('../assets/icons/banana-bamboo_icon.png', contain);
+            }
+
+            &.meat_fish_icon {
+              @include bg_image('../assets/icons/meat-fish_icon.png', contain);
+            }
+          }
+        }
+
+        &:hover {
+          @include media($desktops) {
+            .photo_card {
+              transition: all 0.5s ease-in-out;
+              @include block(calc(100% + 10px));
+              margin-top: -5px;
+              margin-left: -5px;
+            }
+
+            .card_info {
+              background-color: $gray_social;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Testimonial card */
+
+.testimonial_list {
+  position: relative;
+  display: flex;
+
+  @include media($tablet) {
+    flex-direction: column;
+  }
+
+  .testimonial_list_item {
+    @include block(268px, 391px, relative);
+    @include border_radius(20px);
+    min-width: 268px;
+    padding: 15px;
+    margin-right: 30px;
+    background: $gray_light;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+
+    @include media($small_desktop) {
+      min-width: 294px;
+    }
+
+    @include media($tablet) {
+      @include block(100%, 109px);
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+
+    &::before {
+      content: '';
+      @include block(null, null, absolute, 0, 0, 0, 0);
+      background: $pink_gradient;
+      z-index: -1;
+      margin: -2px;
+      border-radius: inherit;
+    }
+
+    .testimonial_card {
+      display: flex;
+      margin-bottom: 10px;
+
+      .avatar_wrapper {
+        @include block(37px, 37px);
+        margin-right: 15px;
+      }
+
+      .user_name {
+        margin: 0;
+        color: $black;
+      }
+    }
+
+    .testimonial_text {
+      @include noscrollbar;
+      height: 309px;
+
+      @include media($tablet) {
+        height: 50%;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .pop_up_testimonial {
+    @include block(100%, 100%, fixed, 0, 0);
+    min-height: 428px;
+    display: none;
+    background: #F5F7F6;
+    padding: 20px 15px;
+    overflow-y: scroll;
+    z-index: 10;
+
+    &.open {
+      @include flex_rules(flex-start, space-between);
+    }
+
+    .testimonial_list_item {
+      @include block(267px, auto);
+
+      .testimonial_text {
+        height: auto;
+      }
+    }
+
+    .popup_icon_active {
+      cursor: pointer;
+    }
+  }
+}

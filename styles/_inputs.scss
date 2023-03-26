@@ -1,0 +1,47 @@
+input.input_text_field {
+  @include border_radius(2px);
+  @include block(228px, 42px);
+  color: $gray4;
+  border: 0.7px solid;
+  border-image-slice: 1;
+  @include linear_gradient($orange_bg, border-image-source);
+  padding: 10px;
+  margin-right: 10px;
+  background: inherit;
+
+  @include placeholder {
+    color: $gray4;
+  }
+
+  &:focus {
+    @include border_radius(2px);
+    border: 0.7px solid $green;
+    outline: none;
+  }
+
+  &.invalid {
+    border: 0.7px solid $red;
+
+    @include placeholder {
+      color: $red;
+    }
+  }
+}
+
+input.btn_form_submit {
+  @include border_radius(5px);
+  @include font(16px, 22px, 400, $regular, $green);
+  @include block(129px, 42px);
+  background: $gray_light;
+  border: 1px solid $green;
+
+  &:active {
+    color: $green;
+    border: 1px solid $green;
+  }
+
+  &.invalid {
+    color: $red;
+    border: 1px solid $red;
+  }
+}
