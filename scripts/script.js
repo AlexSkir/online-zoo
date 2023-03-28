@@ -23,9 +23,9 @@ function validateFormOnSubmit(theForm) {
 function checkScroll() {
   $('#scroll_btn_left').removeClass('inactive');
   $('#scroll_btn_right').removeClass('inactive');
-  var width = $('.animals_list').outerWidth()
-  var scrollWidth = $('.animals_list')[0].scrollWidth;
-  var scrollLeft = $('.animals_list').scrollLeft();
+  var width = Math.floor($('.animals_list').outerWidth());
+  var scrollWidth = Math.floor($('.animals_list')[0].scrollWidth);
+  var scrollLeft = Math.floor($('.animals_list').scrollLeft());
 
   console.log('scrollWidth: ', scrollWidth, 'width: ', width, 'scrollLeft: ', scrollLeft, 'scrollWidth - width: ', scrollWidth - width)
   if (scrollWidth - width === scrollLeft) {
