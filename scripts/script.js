@@ -27,7 +27,6 @@ function checkScroll() {
   var scrollWidth = Math.floor($('.animals_list')[0].scrollWidth);
   var scrollLeft = Math.floor($('.animals_list').scrollLeft());
 
-  console.log('scrollWidth: ', scrollWidth, 'width: ', width, 'scrollLeft: ', scrollLeft, 'scrollWidth - width: ', scrollWidth - width)
   if (scrollWidth - width === scrollLeft) {
     $('#scroll_btn_right').addClass('inactive');
   } else if (scrollLeft === 0) {
