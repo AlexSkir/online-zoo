@@ -70,7 +70,7 @@ jQuery(document).ready(function () {
 
     setTimeout(function () {
       checkScroll();
-    }, 800);
+    }, 1000);
   });
 
 
