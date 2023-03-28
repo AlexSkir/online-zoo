@@ -27,9 +27,9 @@ function checkScroll() {
   var scrollWidth = $('.animals_list')[0].scrollWidth;
   var scrollLeft = $('.animals_list').scrollLeft();
 
+  console.log('scrollWidth: ', scrollWidth, 'width: ', width, 'scrollLeft: ', scrollLeft, 'scrollWidth - width: ', scrollWidth - width)
   if (scrollWidth - width === scrollLeft) {
     $('#scroll_btn_right').addClass('inactive');
-    alert('the end');
   } else if (scrollLeft === 0) {
     $('#scroll_btn_left').addClass('inactive');
   }
@@ -68,7 +68,7 @@ jQuery(document).ready(function () {
 
     setTimeout(function () {
       checkScroll();
-    }, 1000);
+    }, 800);
   });
 
 
