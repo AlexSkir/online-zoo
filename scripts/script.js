@@ -31,9 +31,6 @@ function checkScroll() {
     $('#scroll_btn_right').addClass('inactive');
   } else if (scrollLeft === 0) {
     $('#scroll_btn_left').addClass('inactive');
-  } else {
-    $('#scroll_btn_left').removeClass('inactive');
-    $('#scroll_btn_right').removeClass('inactive');
   }
 }
 
