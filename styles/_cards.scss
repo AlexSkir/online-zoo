@@ -217,6 +217,7 @@
 
     .testimonial_list_item {
       @include block(267px, auto);
+      margin-bottom: 50px;
 
       .testimonial_text {
         height: auto;

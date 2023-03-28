@@ -16,7 +16,7 @@ div#desktop_petstory {
   }
 }
 
-section {
+.section {
   @include block(100%, null, relative);
   padding-left: 220px;
   padding-right: 220px;

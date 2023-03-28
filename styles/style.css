@@ -390,6 +390,7 @@ legend {
 .testimonial_list .pop_up_testimonial .testimonial_list_item {
   width: 267px;
   height: auto;
+  margin-bottom: 50px;
 }
 .testimonial_list .pop_up_testimonial .testimonial_list_item .testimonial_text {
   height: auto;
@@ -804,26 +805,26 @@ div#desktop_petstory {
   }
 }
 
-section {
+.section {
   width: 100%;
   position: relative;
   padding-left: 220px;
   padding-right: 220px;
 }
 @media screen and (max-width: 1601px) {
-  section {
+  .section {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
 @media screen and (max-width: 1001px) {
-  section {
+  .section {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 @media screen and (max-width: 641px) {
-  section {
+  .section {
     padding-left: 10px;
     padding-right: 10px;
   }

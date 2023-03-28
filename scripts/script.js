@@ -23,13 +23,13 @@ function validateFormOnSubmit(theForm) {
 function checkScroll() {
   $('#scroll_btn_left').removeClass('inactive');
   $('#scroll_btn_right').removeClass('inactive');
-  var $width = $('.animals_list').outerWidth()
-  var $scrollWidth = $('.animals_list')[0].scrollWidth;
-  var $scrollLeft = $('.animals_list').scrollLeft();
+  var width = $('.animals_list').outerWidth()
+  var scrollWidth = $('.animals_list')[0].scrollWidth;
+  var scrollLeft = $('.animals_list').scrollLeft();
 
-  if ($scrollWidth - $width === $scrollLeft) {
+  if (scrollWidth - width === scrollLeft) {
     $('#scroll_btn_right').addClass('inactive');
-  } else if ($scrollLeft === 0) {
+  } else if (scrollLeft === 0) {
     $('#scroll_btn_left').addClass('inactive');
   } else {
     $('#scroll_btn_left').removeClass('inactive');
@@ -38,7 +38,6 @@ function checkScroll() {
 }
 
 jQuery(document).ready(function () {
-  console.log('hi')
   jQuery('.scrollbar-external').scrollbar({
     "autoScrollSize": false,
     "scrollx": $('.external-scroll_x'),
@@ -67,7 +66,6 @@ jQuery(document).ready(function () {
   $('#scroll_btn_right').on('click', function () {
     var leftPos = $('.animals_list').scrollLeft();
     var scrollSize = $('.animals_list_item').outerWidth() + 32;
-    console.log(scrollSize)
     $(".animals_list").animate({ scrollLeft: leftPos + scrollSize }, 800);
 
     setTimeout(function () {
@@ -91,8 +89,8 @@ jQuery(document).ready(function () {
   });
 
   $('.testimonial_list_item').on('click', function (e) {
-    console.log('click', screen.width);
-    if (screen.width && screen.width < 1001) {
+    var width = $('#desktop_petstory').width();
+    if (width && width < 1000) {
       var testimonial = '<li class="testimonial_list_item">' + $(e.currentTarget).html() + '</li>';
       $('.pop_up_testimonial').addClass('open').prepend(testimonial);
       $('.popup_icon_active').on('click', function () {
