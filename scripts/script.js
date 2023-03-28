@@ -29,6 +29,7 @@ function checkScroll() {
 
   if (scrollWidth - width === scrollLeft) {
     $('#scroll_btn_right').addClass('inactive');
+    alert('the end');
   } else if (scrollLeft === 0) {
     $('#scroll_btn_left').addClass('inactive');
   }
