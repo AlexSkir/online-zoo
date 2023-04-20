@@ -136,7 +136,7 @@ div#desktop_petstory {
 
 .sec_1_watch_online {
   @include block(null, 700px);
-  @include bg_image('../assets/images/giant_panda.png');
+  @include bg_image('../assets/images/giant_panda.webp');
   background-position-y: -70px;
 
   @include media($small_desktop) {
@@ -145,13 +145,13 @@ div#desktop_petstory {
   }
 
   @include media($tablet) {
-    @include bg_image('../assets/images/giant_panda_tablet.png');
+    @include bg_image('../assets/images/giant_panda_tablet.webp');
     height: 339px;
     background-position-y: -33px;
   }
 
   @include media($phone) {
-    @include bg_image('../assets/images/giant_panda_phone.png');
+    @include bg_image('../assets/images/giant_panda_phone.webp');
     height: 187px;
     background-position-y: 0;
   }
@@ -237,7 +237,7 @@ div#desktop_petstory {
 
   .flower {
     @include block(293px, 605px, absolute, 12px, -93px);
-    @include bg_image('../assets/images/flower_foto.png');
+    @include bg_image('../assets/images/flower_foto.webp');
 
     @include media($small_desktop) {
       display: none;
@@ -246,13 +246,13 @@ div#desktop_petstory {
     @include media($tablet) {
       display: block;
       @include block(132px, 476px, absolute, 0, 0);
-      @include bg_image('../assets/images/flower_foto_tablet.png');
+      @include bg_image('../assets/images/flower_foto_tablet.webp');
     }
 
     @include media($phone) {
       display: block;
       @include block(35px, 217px, absolute, 38px, 0);
-      @include bg_image('../assets/images/flower_foto_phone.png');
+      @include bg_image('../assets/images/flower_foto_phone.webp');
     }
   }
 
@@ -262,7 +262,7 @@ div#desktop_petstory {
   }
 
   .sec_2_image {
-    @include bg_image('../assets/images/bamboo-cap.png');
+    @include bg_image('../assets/images/bamboo-cap.webp');
     @include block(609px, 403px);
 
     @include media($small_desktop) {
@@ -308,7 +308,7 @@ div#desktop_petstory {
 
   .sec_3_palm_photo {
     @include block(880px, 460px, absolute, null, null, 0, -588px);
-    @include bg_image('../assets/images/palm_foto.png');
+    @include bg_image('../assets/images/palm_foto.webp');
 
     @include media($small_desktop) {
       @include block(386px, 202px);
@@ -317,20 +317,20 @@ div#desktop_petstory {
 
     @include media($tablet) {
       @include block(134px);
-      @include bg_image('../assets/images/palm_foto_tablet.png');
+      @include bg_image('../assets/images/palm_foto_tablet.webp');
       left: 0;
     }
 
     @include media($phone) {
       @include block(58px, 72px);
-      @include bg_image('../assets/images/palm_foto_phone.png');
+      @include bg_image('../assets/images/palm_foto_phone.webp');
       left: 0;
     }
   }
 
   .sec_3_strel_photo {
     @include block(368px, 275px, absolute, null, 0, 0, null);
-    @include bg_image('../assets/images/strelitzia.png');
+    @include bg_image('../assets/images/strelitzia.webp');
 
     @include media($small_desktop) {
       @include block(241px, 180px);
@@ -338,12 +338,12 @@ div#desktop_petstory {
 
     @include media($tablet) {
       @include block(175px, 131px);
-      @include bg_image('../assets/images/strelitzia_tablet.png');
+      @include bg_image('../assets/images/strelitzia_tablet.webp');
     }
 
     @include media($phone) {
       @include block(68px, 71px);
-      @include bg_image('../assets/images/strelitzia_phone.png');
+      @include bg_image('../assets/images/strelitzia_phone.webp');
     }
   }
 }
@@ -628,7 +628,7 @@ div#desktop_petstory {
 
   .sec_5_photo {
     @include block(300px, 295px, absolute, null, -120px, -100px);
-    @include bg_image('../assets/images/leav_foto.png');
+    @include bg_image('../assets/images/leav_foto.webp');
 
     @include media($small_desktop) {
       @include block(239px, 235px, null, null, -93px, -67px);
@@ -636,12 +636,12 @@ div#desktop_petstory {
 
     @include media($tablet) {
       @include block(116px, 204px, null, null, 0, -69px);
-      @include bg_image('../assets/images/leav_foto_tablet.png');
+      @include bg_image('../assets/images/leav_foto_tablet.webp');
     }
 
     @include media($phone) {
       @include block(51px, 94px, null, null, 0, -30px);
-      @include bg_image('../assets/images/leav_foto_phone.png');
+      @include bg_image('../assets/images/leav_foto_phone.webp');
     }
   }
 }

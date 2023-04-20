@@ -933,7 +933,7 @@ div#desktop_petstory {
 
 .sec_1_watch_online {
   height: 700px;
-  background: url("../assets/images/giant_panda.png");
+  background: url("../assets/images/giant_panda.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -947,7 +947,7 @@ div#desktop_petstory {
 }
 @media screen and (max-width: 1001px) {
   .sec_1_watch_online {
-    background: url("../assets/images/giant_panda_tablet.png");
+    background: url("../assets/images/giant_panda_tablet.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -957,7 +957,7 @@ div#desktop_petstory {
 }
 @media screen and (max-width: 641px) {
   .sec_1_watch_online {
-    background: url("../assets/images/giant_panda_phone.png");
+    background: url("../assets/images/giant_panda_phone.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1086,7 +1086,7 @@ div#desktop_petstory {
   position: absolute;
   top: 12px;
   right: -93px;
-  background: url("../assets/images/flower_foto.png");
+  background: url("../assets/images/flower_foto.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1104,7 +1104,7 @@ div#desktop_petstory {
     position: absolute;
     top: 0;
     right: 0;
-    background: url("../assets/images/flower_foto_tablet.png");
+    background: url("../assets/images/flower_foto_tablet.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1118,7 +1118,7 @@ div#desktop_petstory {
     position: absolute;
     top: 38px;
     right: 0;
-    background: url("../assets/images/flower_foto_phone.png");
+    background: url("../assets/images/flower_foto_phone.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1130,7 +1130,7 @@ div#desktop_petstory {
   width: 100%;
 }
 .sec_2_body .sec_2_image {
-  background: url("../assets/images/bamboo-cap.png");
+  background: url("../assets/images/bamboo-cap.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1189,7 +1189,7 @@ div#desktop_petstory {
   position: absolute;
   bottom: 0;
   left: -588px;
-  background: url("../assets/images/palm_foto.png");
+  background: url("../assets/images/palm_foto.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1204,7 +1204,7 @@ div#desktop_petstory {
 @media screen and (max-width: 1001px) {
   .sec_3_animals_cards .sec_3_palm_photo {
     width: 134px;
-    background: url("../assets/images/palm_foto_tablet.png");
+    background: url("../assets/images/palm_foto_tablet.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1215,7 +1215,7 @@ div#desktop_petstory {
   .sec_3_animals_cards .sec_3_palm_photo {
     width: 58px;
     height: 72px;
-    background: url("../assets/images/palm_foto_phone.png");
+    background: url("../assets/images/palm_foto_phone.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1228,7 +1228,7 @@ div#desktop_petstory {
   position: absolute;
   right: 0;
   bottom: 0;
-  background: url("../assets/images/strelitzia.png");
+  background: url("../assets/images/strelitzia.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1243,7 +1243,7 @@ div#desktop_petstory {
   .sec_3_animals_cards .sec_3_strel_photo {
     width: 175px;
     height: 131px;
-    background: url("../assets/images/strelitzia_tablet.png");
+    background: url("../assets/images/strelitzia_tablet.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1253,7 +1253,7 @@ div#desktop_petstory {
   .sec_3_animals_cards .sec_3_strel_photo {
     width: 68px;
     height: 71px;
-    background: url("../assets/images/strelitzia_phone.png");
+    background: url("../assets/images/strelitzia_phone.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1714,7 +1714,7 @@ div#desktop_petstory {
   position: absolute;
   right: -120px;
   bottom: -100px;
-  background: url("../assets/images/leav_foto.png");
+  background: url("../assets/images/leav_foto.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1733,7 +1733,7 @@ div#desktop_petstory {
     height: 204px;
     right: 0;
     bottom: -69px;
-    background: url("../assets/images/leav_foto_tablet.png");
+    background: url("../assets/images/leav_foto_tablet.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1745,7 +1745,7 @@ div#desktop_petstory {
     height: 94px;
     right: 0;
     bottom: -30px;
-    background: url("../assets/images/leav_foto_phone.png");
+    background: url("../assets/images/leav_foto_phone.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
