@@ -5,4 +5,4 @@
 [Link to the website](https://alexskir.github.io/online-zoo/)
 
 
-![screenshot](./assets/images/screen1.png "screenshot")
+![screenshot](./assets/images/zoo.webp "screenshot")
